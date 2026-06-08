@@ -39,7 +39,7 @@ Rather than focusing only on theory, this project is centered around practical l
 
 * [x] Kali Linux VM
 * [x] Windows 10 VM
-* [ ] Sysmon
+* [x] Sysmon
 * [ ] Wazuh
 * [ ] Threat Hunting
 * [ ] DDoS Detection
@@ -47,3 +47,4 @@ Rather than focusing only on theory, this project is centered around practical l
 * [ ] BloodHound
 
 This lab will continue to evolve as I learn new technologies, techniques, and security concepts.
+
