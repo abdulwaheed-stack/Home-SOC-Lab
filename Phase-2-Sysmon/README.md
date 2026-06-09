@@ -70,45 +70,93 @@ Sysmon was successfully deployed and configured. The lab now generates detailed 
 
 
 
-### \## **Testing**
+### \## **## Testing and Validation**
+
+### 
+
+**### Nmap Scan Test**
 
 
 
-\### Nmap Scan
+**To validate connectivity between the Kali Linux and Windows 10 virtual machines, an Nmap scan was performed from the Kali system against the Windows host.**
 
 
 
-An Nmap scan was executed from the Kali Linux VM against the Windows 10 VM.
+**\*\*Source System:\*\* Kali Linux**
 
 
 
-Source IP: 192.168.56.102
+**\*\*Source IP:\*\* 192.168.56.102**
 
 
 
-Target IP: 192.168.56.105
+**\*\*Target System:\*\* Windows 10**
 
 
 
-\### Results
+**\*\*Target IP:\*\* 192.168.56.105**
 
 
 
-The scan completed successfully and connectivity between the systems was confirmed.
+**### Evidence**
 
 
 
-Sysmon generated endpoint telemetry during testing. No Sysmon event was found that directly identified the Nmap scan, indicating that additional network-focused logging or detection tools will be required for reconnaissance detection.
+**#### Nmap Scan Results**
 
 
 
-\### Lesson Learned
+**!\[Nmap Scan](screenshots/nmap-scan-results.png)**
 
 
 
-Sysmon is effective for endpoint visibility, but network reconnaissance detection requires additional telemetry sources such as firewall logs, Wazuh, Zeek, or Suricata.
+**The scan completed successfully and confirmed communication between both systems on the Host-Only network.**
 
 
+
+**#### Sysmon Operational Log**
+
+
+
+**!\[Sysmon Operational Log](screenshots/sysmon-operational-log.png)**
+
+
+
+**Sysmon successfully generated and stored endpoint telemetry in the Operational log.**
+
+
+
+**#### Process Creation Event**
+
+
+
+**!\[Process Create Event](screenshots/process-create-event.png)**
+
+
+
+**Process creation events (Event ID 1) were successfully recorded, confirming that Sysmon monitoring is active.**
+
+
+
+**### Findings**
+
+
+
+**\* Communication between Kali Linux and Windows 10 was successfully established.**
+
+**\* Sysmon was verified to be operational and collecting endpoint telemetry.**
+
+**\* Process creation events were successfully logged and reviewed.**
+
+**\* The Nmap scan itself did not generate a clearly identifiable Sysmon event, highlighting the need for additional network-focused monitoring solutions in future phases.**
+
+
+
+**### Conclusion**
+
+
+
+**Phase 2 successfully deployed and validated Sysmon within the Home SOC Lab environment. The Windows endpoint is now capable of generating enhanced telemetry that will be used for future detection engineering, threat hunting, and incident investigation exercises.**
 
 
 
