@@ -110,21 +110,21 @@ Windows Endpoint → Wazuh Agent → Wazuh Server → Dashboard
 
 
 
-!\[Dashboard](samples/wazuh-dashboard.png)
+![Dashboard](samples/wazuh-dashboard.png)
 
 
 
-\### Connected Endpoint
+### Connected Endpoint
 
-&#x20;   (samples/wazuh-started.png)
-
-
-
-!### Security Events
+![Connected Endpoint](samples/wazuh-started.png)
 
 
 
-!\[Event Detection](samples/event-detected.png)
+### Security Events
+
+
+
+![Event Detection](samples/events-detected.png)
 
 
 
